@@ -1,0 +1,16 @@
+{
+  "name": "MySqlConnectorConnector_0",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "tasks.max": "1",
+    "errors.log.enable": "true",
+    "errors.log.include.messages": "true",
+    "database.hostname": "<your.address.ip>",
+    "database.port": "3307",
+    "database.user": "root",
+    "database.password": "example",
+    "database.server.name": "kafka_tr_db",
+    "database.history.kafka.bootstrap.servers": "broker:29092",
+    "database.history.kafka.topic": "database_history"
+  }
+}

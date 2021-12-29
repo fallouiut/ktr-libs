@@ -1,0 +1,5 @@
+mysqladmin variables -uroot|grep log_bin
+
+if it is off, then enable cdc with link: https://www.clairvoyant.ai/blog/mysql-cdc-with-apache-kafka-and-debezium?hsLang=en
+
+

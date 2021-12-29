@@ -1,0 +1,16 @@
+{
+  "doc": "Sample schema to help you get started.",
+  "fields": [
+    {
+      "name": "personName",
+      "type": "string"
+    },
+    {
+      "name": "jobName",
+      "type": "string"
+    }
+  ],
+  "name": "PersonJob",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}

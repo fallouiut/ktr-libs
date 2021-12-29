@@ -1,0 +1,23 @@
+{
+  "doc": "Sample schema to help you get started.",
+  "fields": [
+    {
+      "name": "count",
+      "type": "int"
+    },
+    {
+      "name": "jobName",
+      "type": "string"
+    },
+    {
+      "name": "description",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  ],
+  "name": "JobStat",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}

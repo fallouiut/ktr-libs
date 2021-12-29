@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+
+  # PERSON JOB PRODUCER
+  person-job-producer:
+    network_mode: "host"
+    image: seyfa/ktr:person-job
+    # ports:
+    #   - 8090:8080
+
+  # JOB DESC PRODUCER API
+  job-desc-api:
+    network_mode: "host"
+    image: seyfa/ktr:desc-api
+
+  # PROCESSING
+  processing:
+    network_mode: "host"
+    image: seyfa/ktr:processing
+
+  # JOB DESC PRODUCER FRONT
+  job-desc-front:
+    network_mode: "host"
+    image: seyfa/ktr:desc-front
