@@ -35,42 +35,42 @@ Here is a schema of what i Did: ![topic person-job](https://user-images.githubus
   - FLUSH PRIVILEGES;
 
 <h2>3. Launch Confluent Cluster</h2>
-These step need time and compute power so don't be hurry
-  - Open terminal
-  - cd app/lib/confluent-cluster
+These step need time and compute power so don't be hurry <br/>
+  - Open terminal <br/>
+  - cd app/lib/confluent-cluster <br/>
   - docker-compose up -d
 
 <h2>4. When the Cluster is loaded, then we create topics</h2>
-  - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job
-  - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job-stat
+  - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job <br/>
+  - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job-stat <br/>
 
 <h2>5. Add Schema registry for each of them's value
-  - Open Control Center
-  - Click on Topics -> person-job -> Schema -> Value -> Set a Schema
-  - Copy the content of app/lib/resources/person-job.json into the editor
+  - Open Control Center <br/>
+  - Click on Topics -> person-job -> Schema -> Value -> Set a Schema <br/>
+  - Copy the content of app/lib/resources/person-job.json into the editor <br/>
   - Do the same for person-job-stat
 
 <h2>6. Add a Connector for our MySQL DB</h2>
-  - Normally, CDC is enable, if it is not, sorry but find a way to do it
-  - Open Control Center
-  - Connect -> connect-default -> Add connector -> Upload connector config file
-  - Choose file located in app/lib/resources/mysql_connector_debezium.json
-  - Write your own IP Address on the field "HostName"
+  - Normally, CDC is enable, if it is not, sorry but find a way to do it <br/>
+  - Open Control Center <br/>
+  - Connect -> connect-default -> Add connector -> Upload connector config file <br/>
+  - Choose file located in app/lib/resources/mysql_connector_debezium.json <br/>
+  - Write your own IP Address on the field "HostName" <br/>
   - Click on Next and validate
 
 <h2>7. Launch Consumer</h2>
-  - Open Terminal
-  - cd app/lib/consumer
+  - Open Terminal <br/>
+  - cd app/lib/consumer <br/>
   - docker-compose up -d
 
 <h2>8. Launch Producers + Processing</h2>
-  - Open terminal
-  - cd app/lib/producers
+  - Open terminal <br/>
+  - cd app/lib/producers <br/>
   - docker-compose up -d
 
 <h2>9. When you are finished, you can turnoff all containers (cluster, producers, consumer, db) Than remove all containers and image and maybe prune volumes</h2>
 
-Wait less than 5 min then the pipeline is running
-You can edit A description at http://localhost:4205
-You can see realtime data at http://localhost:4210
+Wait less than 5 min then the pipeline is running <br/>
+You can edit A description at http://localhost:4205 <br/>
+You can see realtime data at http://localhost:4210 <br/>
 You can also see data moving on topics using Control Center
