@@ -18,10 +18,10 @@ I Implemented all of that:
 All of these containers are in my dockerhub (seyfa)
 All of these apps code are in my github (ktr-code)
 
-Here is a schema of what i Did
+Here is a schema of what i Did: ![topic person-job](https://user-images.githubusercontent.com/23740922/147651888-721a3079-a7df-4f97-ae64-8d769cbe495e.png)
 
 
-1. Prerequisites
+<h3>1. Prerequisites</h2>
   - Install Kafka cli
   - Docker + Docker-compose
   - Have enough RAM
