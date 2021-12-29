@@ -19,6 +19,8 @@ All of these containers are in my dockerhub (https://hub.docker.com/r/seyfa/ktr/
 All of these apps code are in my github (https://github.com/fallouiut/ktr-code)
 
 Here is a schema of what i Did: ![topic person-job](https://user-images.githubusercontent.com/23740922/147651888-721a3079-a7df-4f97-ae64-8d769cbe495e.png)
+Error: Connector used is Source instead of Sink.
+
 
 <h2>1. Prerequisites</h2>
   - Install Kafka cli <br/>
