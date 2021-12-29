@@ -44,7 +44,7 @@ These step need time and compute power so don't be hurry <br/>
   - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job <br/>
   - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job-stat <br/>
 
-<h2>5. Add Schema registry for each of them's value
+<h2>5. Add Schema registry for each of them's value</h2>
   - Open Control Center <br/>
   - Click on Topics -> person-job -> Schema -> Value -> Set a Schema <br/>
   - Copy the content of app/lib/resources/person-job.json into the editor <br/>
