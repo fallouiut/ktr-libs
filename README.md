@@ -15,18 +15,17 @@ I Implemented all of that:
  - Consumer UI: Angular (localhost:4210)
  - Confluent Cluster: (localhost:9021)
 
-All of these containers are in my dockerhub (seyfa)
-All of these apps code are in my github (ktr-code)
+All of these containers are in my dockerhub (https://hub.docker.com/r/seyfa/ktr/tags)
+All of these apps code are in my github (https://github.com/fallouiut/ktr-code)
 
 Here is a schema of what i Did: ![topic person-job](https://user-images.githubusercontent.com/23740922/147651888-721a3079-a7df-4f97-ae64-8d769cbe495e.png)
 
-
-<h3>1. Prerequisites</h2>
+<h2>1. Prerequisites</h2>
   - Install Kafka cli
   - Docker + Docker-compose
   - Have enough RAM
 
-2. Launch MYSQL Container
+<h2>2. Launch MYSQL Container</h2>
   - Open Terminal
   - cd app/lib/db
   - docker-compose up -d
@@ -35,23 +34,23 @@ Here is a schema of what i Did: ![topic person-job](https://user-images.githubus
   - GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
   - FLUSH PRIVILEGES;
 
-3. Launch Confluent Cluster
+<h2>3. Launch Confluent Cluster</h2>
 These step need time and compute power so don't be hurry
   - Open terminal
   - cd app/lib/confluent-cluster
   - docker-compose up -d
 
-4. When the Cluster is loaded, then we create topics
+<h2>4. When the Cluster is loaded, then we create topics</h2>
   - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job
   - kafka-topics.sh --create --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --topic person-job-stat
 
-5. Add Schema registry for each of them's value
+<h2>5. Add Schema registry for each of them's value
   - Open Control Center
   - Click on Topics -> person-job -> Schema -> Value -> Set a Schema
   - Copy the content of app/lib/resources/person-job.json into the editor
   - Do the same for person-job-stat
 
-6. Add a Connector for our MySQL DB
+<h2>6. Add a Connector for our MySQL DB</h2>
   - Normally, CDC is enable, if it is not, sorry but find a way to do it
   - Open Control Center
   - Connect -> connect-default -> Add connector -> Upload connector config file
@@ -59,17 +58,17 @@ These step need time and compute power so don't be hurry
   - Write your own IP Address on the field "HostName"
   - Click on Next and validate
 
-7. Launch Consumer
+<h2>7. Launch Consumer</h2>
   - Open Terminal
   - cd app/lib/consumer
   - docker-compose up -d
 
-8. Launch Producers + Processing
+<h2>8. Launch Producers + Processing</h2>
   - Open terminal
   - cd app/lib/producers
   - docker-compose up -d
 
-9. When you are finished, you can turnoff all containers (cluster, producers, consumer, db) Than remove all containers and image and maybe prune volumes
+<h2>9. When you are finished, you can turnoff all containers (cluster, producers, consumer, db) Than remove all containers and image and maybe prune volumes</h2>
 
 Wait less than 5 min then the pipeline is running
 You can edit A description at http://localhost:4205
