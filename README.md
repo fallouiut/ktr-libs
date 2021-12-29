@@ -1,5 +1,5 @@
-Kafka Training, Building a little project to have hands on the Kafka ecosystem
-This is just a little project to understand Kafka, I post so it may help people understand the pipeline and the code.
+<h1>Kafka Training, Building a little project to have hands on the Kafka ecosystem</h1>
+<h1>This is just a little project to understand Kafka, I post so it may help people understand the pipeline and the code.</h1>
 
 Here is the context: We have a list of jobs that we can fill with description, and in the other side, one data source gathers people names with their job name. Theses two data are put into two separate kafka topics (person-job, job-desc) via a Producer (person-job) and a Connector (job-desc).
 Then, we want to count how many people work for each jobs, and if we can, bind it with a description. We put the result on a topic that is consumed by a consumer. An UI can read this consumer to show the realtime data changes.
