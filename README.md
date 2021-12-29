@@ -21,17 +21,17 @@ All of these apps code are in my github (https://github.com/fallouiut/ktr-code)
 Here is a schema of what i Did: ![topic person-job](https://user-images.githubusercontent.com/23740922/147651888-721a3079-a7df-4f97-ae64-8d769cbe495e.png)
 
 <h2>1. Prerequisites</h2>
-  - Install Kafka cli
-  - Docker + Docker-compose
-  - Have enough RAM
+  - Install Kafka cli <br/>
+  - Docker + Docker-compose <br/>
+  - Have enough RAM <br/>
 
 <h2>2. Launch MYSQL Container</h2>
-  - Open Terminal
-  - cd app/lib/db
-  - docker-compose up -d
-  - docker exec -it <container_name> bash
-  - mysl -u root -p + Enter + write 'example'
-  - GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+  - Open Terminal <br/>
+  - cd app/lib/db <br/>
+  - docker-compose up -d <br/>
+  - docker exec -it <container_name> bash <br/>
+  - mysl -u root -p + Enter + write 'example' <br/>
+  - GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'; <br/>
   - FLUSH PRIVILEGES;
 
 <h2>3. Launch Confluent Cluster</h2>
