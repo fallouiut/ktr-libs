@@ -53,7 +53,7 @@ These step need time and compute power so don't be hurry <br/>
   - Do the same for person-job-stat
 
 <h2>6. Add a Connector for our MySQL DB</h2>
-  - Normally, CDC is enable, if it is not, sorry but find a way to do it <br/>
+  - Normally, CDC is enabled, if it is not, find a way to do it <br/>
   - Open Control Center <br/>
   - Connect -> connect-default -> Add connector -> Upload connector config file <br/>
   - Choose file located in app/lib/resources/mysql_connector_debezium.json <br/>
