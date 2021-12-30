@@ -23,7 +23,8 @@ Error: Connector used is Source instead of Sink.
 
 
 <h2>1. Prerequisites</h2>
-  - Install Kafka cli <br/>
+  - Java 11 <br/>
+  - Kafka cli <br/>
   - Docker + Docker-compose <br/>
   - Have enough RAM <br/>
 
