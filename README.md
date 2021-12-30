@@ -32,7 +32,7 @@ Error: Connector used is Source instead of Sink.
   - Open Terminal <br/>
   - cd app/lib/db <br/>
   - docker-compose up -d <br/>
-  - docker exec -it <container_name> bash <br/>
+  - docker exec -it <strong>"container_name"</strong> bash <br/>
   - mysl -u root -p + Enter + write 'example' <br/>
   - GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'; <br/>
   - FLUSH PRIVILEGES;
